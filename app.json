@@ -1,0 +1,8 @@
+{
+  "name": "aitwilio",
+  "description": "AITalk with Twilio",
+  "repository": "https://github.com/mobilebiz/aitwilio",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static", "AITalk", "Twilio"],
+  "image": "heroku/nodejs"
+}

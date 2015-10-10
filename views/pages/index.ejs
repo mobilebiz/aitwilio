@@ -1,0 +1,95 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/stylesheets/onsenui.css">
+<link rel="stylesheet" href="/stylesheets/onsen-css-components.css">
+<link rel="stylesheet" href="/stylesheets/user.css">
+<script src="/javascripts/angular/angular.js"></script>
+<script src="/javascripts/OnsenUI/onsenui.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/javascripts/user.js"></script>
+<body>
+  <ons-navigator var="myNavigator">
+    <ons-page>
+      <ons-toolbar>
+        <div class="center"><%=title%></div>
+      </ons-toolbar>
+      <div style="text-align: center">
+        <br>相手先の電話番号と話者を選択して、発信ボタンを押してください。<br><br>
+          <ons-row align="top">
+            <ons-col size="10%"></ons-col>
+            <ons-col size="40%" align="right">電話番号:&nbsp;</ons-col>
+            <ons-col align="left"><input class="text-input" id="callTo" style="width: 180px" required></ons-col>
+          </ons-row>
+          <ons-row>
+            <ons-col size="10%"></ons-col>
+            <ons-col size="40%" align="right">話者:&nbsp;</ons-col>
+            <ons-col align="left">
+              <select id="speaker_id" class="speaker_id" required>
+                <option value="1">のぞみ（女）</option>
+                <option value="2">すみれ（女）</option>
+                <option value="3">まき（女）</option>
+                <option value="4">かほ（女）</option>
+                <option value="5">あかり（女）</option>
+                <option value="6">ななこ（女）</option>
+                <option value="7">れいな（女）</option>
+                <option value="11">せいじ（男）</option>
+                <option value="12">ひろし（男）</option>
+                <option value="13">おさむ（男）</option>
+                <option value="14">たいち（男）</option>
+                <option value="21">こうたろう（子供男）</option>
+                <option value="22">あんず（子供女）</option>
+                <option value="23">ゆうと（子供男）</option>
+                <option value="24">ちひろ（子供女）</option>
+                <option value="201">みやび（関西女）</option>
+                <option value="202">やまと（関西男）</option>
+              </select>
+            </ons-col>
+          </ons-row>
+          <ons-row>
+            <ons-col size="33%"></ons-col>
+            <ons-col size="33%" align="center"><br>
+              <ons-button modifier="nomal" onclick="btn_connect_click();">
+                発信
+              </ons-button>
+            </ons-col>
+          </ons-row>
+          <ons-row>
+            <ons-col align="center"><br><span style="color: red" id="message"></span></ons-col>
+          </ons-row>
+      </div>
+    </ons-page>
+  </ons-navigator>
+
+<!-- メインページ -->
+  <ons-template id="mainPage">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <span style="color: green; font-size: 14px;" id="main_status"></span>
+        </div>
+        <div class="right">
+          <ons-toolbar-button>
+            <ons-button style="font-size: 14px;" modifier="outline" should-spin="false" var="btn_cancel" onclick="btn_cancel_click();">
+              切断
+            </ons-button>
+          </ons-toolbar-button>
+        </div>
+      </ons-toolbar>
+
+      <div style="text-align: center">
+        <br />
+        <ons-row>
+          <ons-col class="main_history" align="left"><div class="main_history_content" id="main_history_content"></div><ons-col>
+        </ons-row>
+        <ons-row>
+          <ons-col class="main_transparent">
+            <form onSubmit="main_transparent_input_crlf(); return false;">
+              <input class="text-input" style="width: 100%" id="main_transparent_input">
+            </form>
+          <ons-col>
+        </ons-row>
+      </div>
+    </ons-page>
+  </ons-template>
+</body>

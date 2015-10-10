@@ -1,0 +1,43 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.main_transparent {
+  -moz-border-radius: 5px;  /* 古いFirefox */
+  -webkit-border-radius: 5px; /* 古いSafari, Chrome */
+  border-radius: 5px; /* CSS3 */
+  border: 1px gray solid; /* 枠線 */
+  background-color: rgba(24,103,194,0.81); /* 背景色 */
+  margin-left: 10px;  /* マージン左 */
+  margin-right: 10px;  /* マージン右 */
+  margin-top: 5px;  /* マージン上 */
+  padding: 3px; /* パディング */
+}
+
+.main_history {
+  -moz-border-radius: 5px;  /* 古いFirefox */
+  -webkit-border-radius: 5px; /* 古いSafari, Chrome */
+  border-radius: 5px; /* CSS3 */
+  border: 1px gray solid; /* 枠線 */
+  background-color: rgba(24,103,194,0.81); /* 背景色 */
+  margin-left: 10px;  /* マージン左 */
+  margin-right: 10px;  /* マージン右 */
+  margin-top: 5px;  /* マージン上 */
+  padding: 3px; /* パディング */
+}
+
+.main_history_content {
+  font-size: 16px;  /* フォントサイズ */
+  color: white; /* 文字色 */
+  word-wrap: break-word;  /* 文字列は折り返す */
+  height: 400px; /* 高さ */
+  overflow-y: auto; /* 自動スクロール表示 */
+}
+
+.speaker_id {
+  font-size: 14px;  /* フォントサイズ */
+  border: solid 1px #C0C0C0;  /* 枠 */
+  height: 30px; /* 高さ */
+  width: 180px; /* 幅 */
+}

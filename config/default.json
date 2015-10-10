@@ -1,0 +1,13 @@
+{
+  "hostname": "https://xxx.herokuapp.com",
+  "twilio": {
+    "Server": "xxx.herokuapp.com",
+    "SID": "",
+    "Token": "",
+    "From": "+8150XXXXXXXX"
+  },
+  "ai": {
+    "username": "",
+    "password": ""
+  }
+}
