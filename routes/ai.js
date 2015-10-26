@@ -55,7 +55,7 @@ exports.text2wav = function(message, speaker_id, callback) {
           console.error(err.message);
           callback(new Error('WAV file output error.'));
         } else {
-          console.log('duidance.wav created.');
+          console.log('guidance.wav created.');
           callback(null);
         }
       });
